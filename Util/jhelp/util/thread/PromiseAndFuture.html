@@ -44,7 +44,9 @@
                 });
             }
 
-            $(document).ready(function() {
+            function LaunchAll() {
+					launchParser();
+
                 $("table.tableWithFloatingHeader").each(function() {
                     $(this).wrap("<div class=\"divTableWithFloatingHeader\" style=\"position:relative\"></div>");
 
@@ -82,7 +84,7 @@
     <link rel="stylesheet" type="text/css" href="../../../scripts/buttons.css"/>
     <link rel="stylesheet" type="text/css" href="../../../scripts/tables.css"/>
 </head>
-<body onLoad="javascript:launchParser()">
+<body onLoad="javascript:LaunchAll()">
 <h1>Introduction</h1>
 Suppose we have a task that we want do something with the result when it is known. For this create a <b>jhelp.util.thread.Promise</b>.
 The promise created is for say: I don't have the result now but I promise to give you the result since I have it.<br>
